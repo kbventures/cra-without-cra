@@ -14,18 +14,13 @@ install vscode
 
 From Terminal:
 
-`
-mkdir new-react-app
-cd new-react-app
-npm init -y
-touch .gitignore
-`
+`mkdir new-react-app`
+`cd new-react-app`
+`npm init -y`
+`touch .gitignore`
+`mkdir public`
 
-.ignore: node_module
-
-`
-mkdir public
-`
+.ignore add: node_module
 
 #### Install Webpack
 
