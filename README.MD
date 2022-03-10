@@ -3,10 +3,10 @@
 
 ## Required installations
 
-install ubuntu
-install git
-install nvm
-install vscode
+install ubuntu   
+install git   
+install nvm   
+install vscode   
 
 ## Step By Step Guide From Terminal
 
