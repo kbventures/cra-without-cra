@@ -184,4 +184,52 @@ import ReactDOM from 'react-dom'`
   )
 );`
 
+### Adding Babel to Wepback
+
+Replace index.js code with:
+
+`import React from 'react';
+import ReactDOM from 'react-dom';
+ReactDOM.render(
+  <h1>Hello from js</h1>,
+  document.querySelector(
+    '#fromjs'
+  )
+);`
+
+Run:
+
+`npm run start'
+
+Notice error!
+
+Dependencies
+
+`npm i @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react babel-loader --save-dev`\
+
+Add Module to webpack.config.js
+
+`const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+    mode: 'development',
+module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react', '@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime'],
+          },
+        },
+      },
+    ],
+  },...`
+
+  `npm run start`
+
+  #### Add HTML Elements
+
 
