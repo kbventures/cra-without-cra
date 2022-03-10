@@ -162,7 +162,7 @@ Add to ./public/index.html
 Add Code which Interacts With HTML DOM in ./src/index.js:
 
 `
-document.querySelector('#fromjs').innerHTML = `<h1>From index.js</h1>`;
+document.querySelector('#fromjs').innerHTML = '<h1>From index.js</h1>';
 `
 
 Check result.
