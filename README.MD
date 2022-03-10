@@ -129,17 +129,7 @@ touch ./public/index.html
 Add this code to ./public.index.html
 
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <h1>
-            This is the HTML file
-        </h1>
-    </head>
-    <body>
-
-    </body>
-</html>
+`<!DOCTYPE html><html><head><h1>This is the HTML file</h1></head><body></body></html>`
 
 
 `npm run start`
