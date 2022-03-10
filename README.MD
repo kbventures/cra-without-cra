@@ -21,7 +21,7 @@ From Terminal:
 
 .ignore add: node_module
 
-#### Install Webpack
+### Install Webpack
 
 `touch webpack.config.js`  
 `npm install -save-dev webpack webpack-cli`  
@@ -177,5 +177,25 @@ document.querySelector('#fromjs').innerHTML = `<h1>From index.js</h1>`;
 
 Check result.
 
+
+### Add react And react-dom
+
+Terminal: 
+
+`npm install --save-dev react react-dom`
+
+Index.js:
+
+`
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+ReactDOM.render(
+  'Hello from index.js',
+  document.querySelector(
+    '#fromjs'
+  )
+);
+`
 
 
