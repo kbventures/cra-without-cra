@@ -191,7 +191,7 @@ Replace index.js code with:
 `import React from 'react';
 import ReactDOM from 'react-dom';
 ReactDOM.render(
-  <h1>Hello from js</h1>,
+  '<h1>Hello from js</h1>',
   document.querySelector(
     '#fromjs'
   )
@@ -237,7 +237,7 @@ index.js:
   `import React from 'react';
 import ReactDOM from 'react-dom';
 ReactDOM.render(
-  <h1>Hello from js</h1>,
+  '<h1>Hello from js</h1>',
   document.querySelector(
     '#fromjs'
   )
@@ -283,7 +283,9 @@ Then,
 `npm run start`
 
 
+
 ### Install Jest 
+
 
 `npm install --save-dev jest`
 
@@ -315,7 +317,7 @@ Test:
 
 Modify package.json to watch for changes:
 
-``{
+`{
   "scripts": {
     "test": "jest --watch"
   }
