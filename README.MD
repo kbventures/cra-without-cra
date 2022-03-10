@@ -118,7 +118,9 @@ module.exports = {
 npm run start
 `
 
-Notice erros!
+Notice errors!
+
+Solution: 
 
 `
 touch ./public/index.html
@@ -126,7 +128,7 @@ touch ./public/index.html
 
 Add this code to ./public.index.html
 
-`
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -138,7 +140,7 @@ Add this code to ./public.index.html
 
     </body>
 </html>
-`
+
 
 `npm run start`
 
