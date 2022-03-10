@@ -230,6 +230,99 @@ module: {
 
   `npm run start`
 
-  #### Add HTML Elements
+  #### Injecting HTML Elements
+
+index.js: 
+
+  `import React from 'react';
+import ReactDOM from 'react-dom';
+ReactDOM.render(
+  <h1>Hello from js</h1>,
+  document.querySelector(
+    '#fromjs'
+  )
+);`
+
+`npm run start`
+
+Browse to HTTP://localhost:8080
+
+
+### Adding React Component
+
+`touch ./src/App.js`
+
+Add: 
+
+
+`import React from 'react'
+function App() {
+  return (
+    <div>
+        <p>
+          JSX transpiled to JS <code>src/App.js</code>.
+        </p>
+    </div>
+  );
+}
+export default App;`
+
+Replace code in ./src/index.js with:
+
+`import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+ReactDOM.render(
+    <App />,
+  document.querySelector('#fromjs')
+);`
+
+
+Then,
+
+`npm run start`
+
+
+### Install Jest 
+
+`npm install --save-dev jest`
+
+Create File src/sum.js:
+
+`function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;`
+
+Create src/sum.test.js:
+
+`const sum = require('./sum');
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});`
+
+Modify package.json
+
+`{
+  "scripts": {
+    "test": "jest"
+  }
+}`
+
+Test:
+
+`npm run test`
+
+Modify package.json to watch for changes:
+
+``{
+  "scripts": {
+    "test": "jest --watch"
+  }
+}`
+
+
+
+
 
 
