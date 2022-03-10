@@ -156,7 +156,7 @@ Showing content of the javascript file on the browser through the HTML file:
 Add to ./public/index.html
 
 `
-<div id="fromjs"></div>
+'<div id="fromjs"></div>'
 `
 
 Add Code which Interacts With HTML DOM in ./src/index.js:
