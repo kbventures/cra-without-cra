@@ -12,14 +12,15 @@ install vscode
 
 ### Initial Setup
 
-Terminal:
+From Terminal:
+
 `
 mkdir new-react-app
 cd new-react-app
 npm init -y
-
 touch .gitignore
 `
+
 .ignore: node_module
 
 `
