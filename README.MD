@@ -13,7 +13,6 @@ install vscode
 ### Initial Setup
 
 From Terminal:
-
 `mkdir new-react-app`  
 `cd new-react-app`  
 `npm init -y`  
@@ -26,6 +25,7 @@ From Terminal:
 
 `touch webpack.config.js`  
 `npm install -save-dev webpack webpack-cli`  
+
 
 Modify package.json:
 
@@ -65,10 +65,9 @@ This is the main entry point for webpack.
 npm run build
 `
 
-notice dist folder is created &
-./dist/main.js
-
+Notice dist folder & ./dist/main.js is created
 This is the main bunbled file.
+
 
 #### Install Webpack server
 
@@ -76,35 +75,32 @@ This is the main bunbled file.
 npm i --save-dev webpack-server webpack-dev-server
 `
 
+
 In package.json:
 
-`
-“start”: “webpack serve”
-`
-`
-npm run start
-`
+`“start”: “webpack serve”`  
+`npm run start`  
+
 
 You can see the content of main.js here [http://localhost:8080/main.js](http://localhost:8080/main.js)
 
 #### Add HTML Webpack Plugin
 
-`
-npm install --save-dev html-wepback-plugin
-`
+`npm install --save-dev html-wepback-plugin`  
+
 
 Add to webpack.config.js:
 
-`
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-`
+`const HtmlWebpackPlugin = require('html-webpack-plugin');`  
+
 
 This generates and index.html and add bundle.js files.
 
+
 Add plugin in webpack.config.js
 
-`
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+`const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -116,7 +112,7 @@ module.exports = {
       }),
     ],
   };
-`
+`  
 
 `
 npm run start
