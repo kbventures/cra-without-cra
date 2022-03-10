@@ -24,12 +24,8 @@ From Terminal:
 
 #### Install Webpack
 
-`
-touch webpack.config.js
-
-npm install -save-dev webpack webpack-cli
-
-`
+`touch webpack.config.js`  
+`npm install -save-dev webpack webpack-cli`  
 
 Modify package.json:
 
