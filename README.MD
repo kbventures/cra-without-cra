@@ -12,7 +12,7 @@ install vscode
 
 ### Initial Setup
 
-From Terminal:
+From Terminal:  
 `mkdir new-react-app`  
 `cd new-react-app`  
 `npm init -y`  
@@ -100,9 +100,9 @@ This generates and index.html and add bundle.js files.
 Add plugin in webpack.config.js
 
 
-`const HtmlWebpackPlugin = require('html-webpack-plugin');
+`const HtmlWebpackPlugin = require('html-webpack-plugin');`
 
-
+`
 module.exports = {
     mode: 'development',
     plugins: [
@@ -112,7 +112,7 @@ module.exports = {
       }),
     ],
   };
-`  
+`    
 
 `
 npm run start
