@@ -324,6 +324,17 @@ Modify package.json to watch for changes:
 }`
 
 
+### Jest Using Babel With React
+
+`npm install --save-dev babel-jest @babel/core @babel/preset-env react-test-renderer`
+
+Create babel.config.js
+
+`module.exports = {
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+};`
+
+
 
 
 
