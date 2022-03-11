@@ -383,7 +383,6 @@ class Add extends Component {
     );
   }
 }
-
 export default Add;`
 
 Modify App.js
