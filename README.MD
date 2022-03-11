@@ -362,7 +362,7 @@ Create jest.config.js and add:
 
 `module.exports = {
     setupFiles: [
-        '<\rootDir>/test/setupTests.js',
+        '<rootDir>/test/setupTests.js',
     ]
 };`
 
@@ -375,11 +375,11 @@ Create ./src/compponents/Add.js
 class Add extends Component {
   render() {
     return (
-      <\div>
-       <\h1>Add Function Header 1</h1>
-       <\h1>Add Function Header 2</h1>
-       <\h1>Add Function Header 3</h1>
-      <\/div>
+      <div>
+       <h1>Add Function Header 1</h1>
+       <h1>Add Function Header 2</h1>
+       <h1>Add Function Header 3</h1>
+      </div>
     );
   }
 }
@@ -393,12 +393,12 @@ import React from 'react'
 
 function App() {
   return (
-    <\div>
-        <\p>
-          JSX transpiled to JS <\code>src/App.js<\/code>.
-        <\/p>
-        <\header><\Add /><\/header>
-    <\/div>
+    <div>
+        <p>
+          JSX transpiled to JS <code>src/App.js</code>.
+        </p>
+        <header><Add /></header>
+    </div>
   );
 }
 
