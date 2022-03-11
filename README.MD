@@ -26,9 +26,12 @@ From Terminal:
 
 .ignore add: node_module
 
+
+
 ### Install Webpack
 
 `touch webpack.config.js`  
+
 `npm install -save-dev webpack webpack-cli`  
 
 
@@ -84,6 +87,7 @@ npm i --save-dev webpack-server webpack-dev-server
 In package.json:
 
 `“start”: “webpack serve”`  
+
 `npm run start`  
 
 
@@ -108,7 +112,7 @@ Add plugin in webpack.config.js
 `const HtmlWebpackPlugin = require('html-webpack-plugin');`
 
 `
-module.exports = {
+`module.exports = {
     mode: 'development',
     plugins: [
       new HtmlWebpackPlugin({
@@ -116,20 +120,18 @@ module.exports = {
           './public/index.html',
       }),
     ],
-  };
+  };`
 `    
 
 `
-npm run start
+`npm run start`
 `
 
 Notice errors!
 
 Solution: 
 
-`
-touch ./public/index.html
-`
+`touch ./public/index.html`
 
 Add this code to ./public.index.html
 
@@ -141,18 +143,18 @@ Add this code to ./public.index.html
 
 Open browser in localhost:8080 and check the developer console. Notice this was injected:
 
-`
-<script defer src="main.js"></script></head>
 
-`
+`<script defer src="main.js"></script></head>`
+
 
 The webpack plugin added it!!!
 
 Add console.log(“My First Web App”); ./src/index.js
 
-
 Go to the localhost page, inspect and select Console, and see the output as shown below.
 You can see My First Web App
+
+
 
 #### Link Javascript with HTML
 
@@ -164,9 +166,7 @@ Add to ./public/index.html
 
 Add Code which Interacts With HTML DOM in ./src/index.js:
 
-`
-document.querySelector('#fromjs').innerHTML = '<h1>From index.js</h1>';
-`
+`document.querySelector('#fromjs').innerHTML = '<h1>From index.js</h1>';`
 
 Check result.
 
