@@ -42,8 +42,8 @@ render(){
     return(
         <div>
             <p>Current count: {this.state.count}</p>
-            <button className='increment' onClick={this.increment}>Increment count</button>
-            <button className='decrement' onClick={this.decrement}>Decrement count</button>
+            <button className='increment' onClick={this.increment}>+++</button>
+            <button className='decrement' onClick={this.decrement}>---</button>
         </div>
     )
 }

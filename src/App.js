@@ -1,5 +1,6 @@
 import Add from './components/Add';
 import Counter from './components/Counter';
+import CounterList from './components/CounterList'
 import React from 'react'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         </p>
         <header><Add /></header>
         <Counter />
+        <CounterList />
     </div>
   );
 }

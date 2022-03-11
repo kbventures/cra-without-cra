@@ -1,8 +1,20 @@
 import React from 'react';
 import Counter from '../components/Counter';
 import {shallow} from 'enzyme';
+import renderer from 'react-test-renderer';
 
 describe('Counter component', ()=>{
+
+    // Snapshot test
+    it('matches the snapshot', ()=>{
+        const tree = renderer.create(<Counter />).toJSON()
+        // console.log(tree)
+        // console.log(tree.children)
+        // expect(tree).toMatchSnapshot()
+        expect(tree).toMatchSnapshot()
+    })
+
+
     it('starts with a count of 0', ()=>{
         const wrapper = shallow(<Counter />)
         // const countState = wrapper.state().count
