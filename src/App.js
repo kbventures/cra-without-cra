@@ -1,4 +1,5 @@
 import Add from './components/Add';
+import Counter from './components/Counter';
 import React from 'react'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
           JSX transpiled to JS <code>src/App.js</code>.
         </p>
         <header><Add /></header>
+        <Counter />
     </div>
   );
 }

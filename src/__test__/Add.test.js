@@ -1,4 +1,4 @@
-import Add from '../src/components/Add';
+import Add from '../components/Add';
 describe('<Add /> rendering', () => {
     it('should render one <h1>', () => {
         let wrapper = shallow(<Add />);

@@ -1,5 +1,6 @@
+// Telling Jest Where Files Are
 module.exports = {
     setupFiles: [
-        '<rootDir>/test/setupTests.js',
+        '<rootDir>/src/__test__/setupTests.js',
     ]
 };
