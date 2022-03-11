@@ -337,5 +337,82 @@ Create babel.config.js
 
 
 
+### Jest using Installing Enzyme
 
+`npm install --save-dev enzyme @wojtekmaj/enzyme-adapter-react-17`
+
+`mkdir test`
+
+`touch ./test/setupTests.js`
+
+Add following content to above file:
+
+`import React from 'react';
+import Enzyme, { shallow, render, mount } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+// React 16 Enzyme adapter
+Enzyme.configure({ adapter: new Adapter() });
+// Make Enzyme functions available in all test files without importing
+global.React = React;
+global.shallow = shallow;
+global.render = render;
+global.mount = mount;`
+
+Create jest.config.js and add:
+
+`module.exports = {
+    setupFiles: [
+        '<\rootDir>/test/setupTests.js',
+    ]
+};`
+
+The purpose of this configuration is to tell the Jest to execute this setupTests.js file when running the tests, so the variables declared as global in this file can be used in tests that we are going to write
+
+Create ./src/compponents/Add.js
+
+`import React, { Component } from 'react';
+
+class Add extends Component {
+  render() {
+    return (
+      <\div>
+       <\h1>Add Function Header 1</h1>
+       <\h1>Add Function Header 2</h1>
+       <\h1>Add Function Header 3</h1>
+      <\/div>
+    );
+  }
+}
+
+export default Add;`
+
+Modify App.js
+
+`import Add from './components/Add';
+import React from 'react'
+
+function App() {
+  return (
+    <\div>
+        <\p>
+          JSX transpiled to JS <\code>src/App.js<\/code>.
+        <\/p>
+        <\header><\Add /><\/header>
+    <\/div>
+  );
+}
+
+export default App;`
+
+
+A simple Test using Enzyme with Jest:
+
+`import Add from '../src/components/Add';
+describe('<
+Add /> rendering', () => {
+    it('should render one <\h1>', () => {
+        let wrapper = shallow(<\Add />);
+        expect(wrapper.children('h1')).toHaveLength(3);
+    });
+});`
 
